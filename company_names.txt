@@ -1,0 +1,160 @@
+Google
+Meta
+Amazon
+Apple
+Microsoft
+Netflix
+OpenAI
+Anthropic
+xAI
+NVIDIA
+Databricks
+Snowflake
+Palantir Technologies
+Stripe
+Airbnb
+Uber
+Lyft
+Pinterest
+LinkedIn
+Dropbox
+Adobe
+Salesforce
+Atlassian
+Intuit
+Oracle
+Cisco
+IBM
+SAP
+ServiceNow
+Workday
+Twilio
+Cloudflare
+GitHub
+GitLab
+MongoDB
+Elastic
+Confluent
+HashiCorp
+Synopsys
+Cadence Design Systems
+Autodesk
+AMD
+Intel
+Qualcomm
+Arm
+Shopify
+Wealthsimple
+Cohere
+Ada
+Clio
+1Password
+PointClickCare
+OpenText
+GeoComply
+Arctic Wolf
+Faire
+Clearco
+ThinkOn
+Kinaxis
+BlackBerry
+Descartes Systems Group
+Visier
+Loblaw Digital
+ecobee
+Hootsuite
+Royal Bank of Canada (RBC)
+Toronto-Dominion Bank (TD)
+Bank of Montreal (BMO)
+Scotiabank
+Canadian Imperial Bank of Commerce (CIBC)
+National Bank of Canada
+EQ Bank
+Robinhood
+Plaid
+Affirm
+Brex
+Mercury
+Coinbase
+Block
+PayPal
+Visa
+Mastercard
+Capital One
+KOHO
+Float
+Electronic Arts
+Ubisoft
+Riot Games
+Epic Games
+Unity
+Roblox
+Discord
+Valve
+Behaviour Interactive
+Accenture
+Deloitte
+PwC
+EY
+KPMG
+CGI
+Bell Canada
+TELUS
+Rogers Communications
+Ericsson
+Nokia
+Siemens
+Bosch
+General Electric
+Honeywell
+Juniper Networks
+NetApp
+Pure Storage
+Western Digital
+Seagate
+Motorola Solutions
+Trimble
+MathWorks
+Garmin
+BlackLine
+Supabase
+Replicate
+Perplexity AI
+Glean
+Hex
+Vercel
+Figma
+Notion
+Ramp
+Linear
+Tesla
+SpaceX
+Rivian
+Lucid Motors
+Cruise
+Waymo
+Zoox
+Anduril
+DoorDash
+Instacart
+Expedia
+Zillow
+Yelp
+Canva
+Red Hat
+Box
+Okta
+New Relic
+Splunk
+Redfin
+Sony Interactive Entertainment
+Nintendo
+Activision
+Blizzard Entertainment
+King
+Bungie
+Insomniac Games
+Rockstar Games
+Take-Two Interactive
+CD Projekt
+PlayStation Studios

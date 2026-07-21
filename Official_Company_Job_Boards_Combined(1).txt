@@ -1,0 +1,147 @@
+OFFICIAL COMPANY JOB BOARDS (Combined)
+Format: Company | Official Careers URL | ATS/Platform
+
+Google | https://www.google.com/about/careers/applications/jobs/results/ | Google Careers
+Meta | https://www.metacareers.com/jobs/ | Meta Careers
+Amazon | https://www.amazon.jobs/en/ | Amazon Jobs
+Apple | https://jobs.apple.com/en-ca/search | Apple Jobs
+Microsoft | https://careers.microsoft.com/ | Microsoft Careers
+Netflix | https://jobs.netflix.com/ | Netflix Careers
+NVIDIA | https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite | Workday
+Pinterest | https://www.pinterestcareers.com/jobs/ | Pinterest Careers
+LinkedIn | https://www.linkedin.com/careers | LinkedIn Careers
+Uber | https://www.uber.com/ca/en/careers/list/ | Uber Careers
+Airbnb | https://careers.airbnb.com/positions/ | Airbnb Careers
+Lyft | https://www.lyft.com/careers | Lyft Careers
+Stripe | https://stripe.com/jobs/search | Stripe Jobs
+Databricks | https://www.databricks.com/company/careers/open-positions | Databricks Careers
+Snowflake | https://careers.snowflake.com/us/en/search-results | Snowflake Careers
+Palantir Technologies | https://www.palantir.com/careers/open-positions/ | Palantir Careers
+Adobe | https://careers.adobe.com/ | Adobe Careers
+Salesforce | https://careers.salesforce.com/ | Salesforce Careers
+Atlassian | https://www.atlassian.com/company/careers | Greenhouse
+Intuit | https://jobs.intuit.com/ | Intuit Careers
+Oracle | https://www.oracle.com/careers/ | Oracle Careers
+Cisco | https://jobs.cisco.com/ | Cisco Careers
+IBM | https://www.ibm.com/careers/ | IBM Careers
+SAP | https://jobs.sap.com/ | SuccessFactors
+ServiceNow | https://careers.servicenow.com/jobs/ | ServiceNow Careers
+Workday | https://workday.wd5.myworkdayjobs.com/Workday | Workday
+Twilio | https://www.twilio.com/company/jobs | Greenhouse
+Cloudflare | https://www.cloudflare.com/careers/jobs/ | Greenhouse
+GitHub | https://www.github.careers/ | GitHub Careers
+GitLab | https://about.gitlab.com/jobs/ | Greenhouse
+MongoDB | https://www.mongodb.com/company/careers | Greenhouse
+Elastic | https://www.elastic.co/careers | Greenhouse
+Confluent | https://careers.confluent.io/ | Greenhouse
+HashiCorp | https://www.hashicorp.com/careers | Greenhouse
+Synopsys | https://careers.synopsys.com/ | Workday
+Cadence Design Systems | https://cadence.wd1.myworkdayjobs.com/Careers | Workday
+Autodesk | https://www.autodesk.com/careers | Workday
+AMD | https://careers.amd.com/ | Workday
+Intel | https://jobs.intel.com/ | Intel Careers
+Qualcomm | https://www.qualcomm.com/company/careers | Phenom
+Arm | https://careers.arm.com/ | Workday
+Juniper Networks | https://careers.juniper.net/ | Workday
+NetApp | https://careers.netapp.com/ | Workday
+Pure Storage | https://careers.purestorage.com/ | Greenhouse
+MathWorks | https://www.mathworks.com/company/jobs.html | MathWorks Careers
+Garmin | https://careers.garmin.com/ | Garmin Careers
+Shopify | https://www.shopify.com/careers | Shopify Careers
+Wealthsimple | https://jobs.lever.co/wealthsimple | Lever
+Cohere | https://jobs.ashbyhq.com/cohere | Ashby
+Ada | https://www.ada.cx/careers | Greenhouse
+Clio | https://www.clio.com/careers/ | Greenhouse
+1Password | https://jobs.ashbyhq.com/1password | Ashby
+PointClickCare | https://jobs.pointclickcare.com/ | Workday
+OpenText | https://careers.opentext.com/ | Workday
+GeoComply | https://jobs.ashbyhq.com/geocomply | Ashby
+Arctic Wolf | https://arcticwolf.com/company/careers/ | Greenhouse
+Faire | https://www.faire.com/careers | Greenhouse
+Clearco | https://clear.co/careers | Greenhouse
+ThinkOn | https://www.thinkon.com/careers/ |
+Kinaxis | https://www.kinaxis.com/en/careers | Workday
+BlackBerry | https://www.blackberry.com/us/en/company/careers | Workday
+Descartes Systems Group | https://www.descartes.com/careers |
+Visier | https://www.visier.com/company/careers/ | Greenhouse
+Loblaw Digital | https://www.loblawdigital.co/careers | Greenhouse
+ecobee | https://www.ecobee.com/en-ca/careers/ | Greenhouse
+Hootsuite | https://www.hootsuite.com/about/careers | Greenhouse
+RBC | https://jobs.rbc.com/ | Workday
+TD Bank | https://careers.td.com/ | Workday
+BMO | https://jobs.bmo.com/ca/en | BMO Careers
+Scotiabank | https://jobs.scotiabank.com/ | SuccessFactors
+CIBC | https://www.cibc.com/en/about-cibc/careers.html | Workday
+National Bank of Canada | https://jobs.nbc.ca/ | NBC Careers
+EQ Bank | https://eqbcareers.com/ | EQB Careers
+Robinhood | https://careers.robinhood.com/ | Greenhouse
+Plaid | https://plaid.com/careers/ | Greenhouse
+Affirm | https://www.affirm.com/careers | Greenhouse
+Brex | https://www.brex.com/careers | Greenhouse
+Mercury | https://mercury.com/careers | Ashby
+Coinbase | https://www.coinbase.com/careers | Ashby
+Block | https://block.xyz/careers | Greenhouse
+PayPal | https://careers.pypl.com/ | Workday
+Visa | https://corporate.visa.com/en/careers.html | Workday
+Mastercard | https://careers.mastercard.com/ | Workday
+Electronic Arts | https://www.ea.com/careers | EA Careers
+Ubisoft | https://www.ubisoft.com/en-us/company/careers | SmartRecruiters
+Riot Games | https://www.riotgames.com/en/work-with-us | Greenhouse
+Epic Games | https://www.epicgames.com/site/en-US/careers | Greenhouse
+Unity | https://careers.unity.com/ | Greenhouse
+Roblox | https://careers.roblox.com/ | Greenhouse
+Discord | https://discord.com/jobs | Ashby
+Valve | https://www.valvesoftware.com/en/jobs |
+Behaviour Interactive | https://www.bhvr.com/careers/ |
+Nintendo | https://careers.nintendo.com/ | iCIMS
+Sony Interactive Entertainment (PlayStation) | https://careers.playstation.com/ | PlayStation Careers
+Activision | https://careers.activision.com/ | Workday
+Blizzard Entertainment | https://careers.blizzard.com/ | Workday
+King | https://careers.king.com/ | SmartRecruiters
+Bungie | https://careers.bungie.com/ | Greenhouse
+Insomniac Games | https://insomniac.games/careers/ |
+Rockstar Games | https://www.rockstargames.com/careers | Workday
+Take-Two Interactive | https://www.take2games.com/careers/ |
+CD PROJEKT | https://jobs.cdprojektred.com/ | Greenhouse
+Accenture | https://www.accenture.com/ca-en/careers | Workday
+Deloitte | https://www2.deloitte.com/ca/en/careers.html | Phenom
+PwC | https://www.pwc.com/ca/en/careers.html | Workday
+EY | https://www.ey.com/en_ca/careers | Phenom
+KPMG | https://kpmg.com/ca/en/home/careers.html | Phenom
+CGI | https://cgi.njoyn.com/ | Njoyn
+Bell | https://jobs.bell.ca/ | Workday
+TELUS | https://www.telus.com/en/careers | Workday
+Rogers Communications | https://jobs.rogers.com/ | Workday
+Ericsson | https://www.ericsson.com/en/careers | SmartRecruiters
+Nokia | https://www.nokia.com/about-us/careers/ | Workday
+OpenAI | https://openai.com/careers/ | OpenAI Careers
+Anthropic | https://www.anthropic.com/careers/jobs | Greenhouse
+xAI | https://x.ai/careers | xAI Careers
+Vercel | https://vercel.com/careers | Greenhouse
+Supabase | https://supabase.com/careers | Supabase Careers
+Perplexity | https://www.perplexity.ai/careers | Ashby
+Replicate | https://replicate.com/careers |
+Ramp | https://ramp.com/careers | Ashby
+Linear | https://linear.app/careers | Ashby
+Notion | https://www.notion.so/careers | Ashby
+Figma | https://www.figma.com/careers/ | Greenhouse
+Glean | https://www.glean.com/careers | Ashby
+Hex | https://hex.tech/careers | Ashby
+Tesla | https://www.tesla.com/careers | Tesla Careers
+SpaceX | https://www.spacex.com/careers/ | SpaceX Careers
+Rivian | https://careers.rivian.com/ | Workday
+Lucid Motors | https://careers.lucidmotors.com/ | Workday
+Waymo | https://waymo.com/careers/ | Greenhouse
+Zoox | https://www.zoox.com/careers/ | Greenhouse
+Cruise | https://getcruise.com/careers/ |
+Anduril | https://www.anduril.com/careers/ | Greenhouse
+Canva | https://www.canva.com/careers/ | Greenhouse
+Red Hat | https://www.redhat.com/en/jobs | Red Hat Careers
+Box | https://www.box.com/careers | Greenhouse
+Okta | https://www.okta.com/company/careers/ | Greenhouse
+Splunk | https://www.splunk.com/en_us/careers.html | Cisco Careers
+New Relic | https://newrelic.com/about/careers | Greenhouse
+Redfin | https://www.redfin.com/careers | Greenhouse
+Expedia Group | https://careers.expediagroup.com/ | Workday
+Zillow | https://www.zillow.com/careers/ | Greenhouse
+Yelp | https://www.yelp.careers/ | Greenhouse

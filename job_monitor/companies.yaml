@@ -1,0 +1,1120 @@
+companies:
+- name: Cohere
+  careers_url: https://jobs.ashbyhq.com/cohere
+  platform_hint: Ashby
+  enabled: true
+  connector: ashby
+  board_name: cohere
+  discovery_status: resolved
+  validation_status: valid
+  validation_error: null
+  last_job_count: 137
+- name: Wealthsimple
+  careers_url: https://jobs.lever.co/wealthsimple
+  platform_hint: Lever
+  enabled: true
+  connector: lever
+  site_name: wealthsimple
+  region: global
+  discovery_status: resolved
+  validation_status: valid
+  validation_error: null
+  last_job_count: 0
+- name: Anthropic
+  careers_url: https://www.anthropic.com/careers/jobs
+  platform_hint: Greenhouse
+  enabled: true
+  connector: greenhouse
+  board_token: anthropic
+  discovery_status: resolved
+  discovered_url: https://job-boards.greenhouse.io/anthropic/jobs/4980436008
+  validation_status: valid
+  validation_error: null
+  last_job_count: 405
+- name: NVIDIA
+  careers_url: https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite
+  platform_hint: Workday
+  enabled: true
+  connector: workday
+  api_url: https://nvidia.wd5.myworkdayjobs.com/wday/cxs/nvidia/NVIDIAExternalCareerSite/jobs
+  public_base_url: https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite
+  discovery_status: resolved
+  validation_status: valid
+  validation_error: null
+  last_job_count: 40
+- name: 1Password
+  careers_url: https://jobs.ashbyhq.com/1password
+  platform_hint: Ashby
+  enabled: true
+  connector: ashby
+  board_name: 1password
+  discovery_status: resolved
+  validation_status: valid
+  validation_error: null
+  last_job_count: 67
+- name: Google
+  careers_url: https://www.google.com/about/careers/applications/jobs/results/
+  platform_hint: Google Careers
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: Google Careers, but the underlying board
+    URL was not detected'
+- name: Amazon
+  careers_url: https://www.amazon.jobs/en/
+  platform_hint: Amazon Jobs
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: Amazon Jobs, but the underlying board URL
+    was not detected'
+- name: Apple
+  careers_url: https://jobs.apple.com/en-ca/search
+  platform_hint: Apple Jobs
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: Apple Jobs, but the underlying board URL
+    was not detected'
+- name: Microsoft
+  careers_url: https://careers.microsoft.com/
+  platform_hint: Microsoft Careers
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: Microsoft Careers, but the underlying board
+    URL was not detected'
+- name: Netflix
+  careers_url: https://jobs.netflix.com/
+  platform_hint: Netflix Careers
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: Netflix Careers, but the underlying board
+    URL was not detected'
+- name: Pinterest
+  careers_url: https://www.pinterestcareers.com/jobs/
+  platform_hint: Pinterest Careers
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: Pinterest Careers, but the underlying board
+    URL was not detected'
+- name: LinkedIn
+  careers_url: https://www.linkedin.com/careers
+  platform_hint: LinkedIn Careers
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: LinkedIn Careers, but the underlying board
+    URL was not detected'
+- name: Uber
+  careers_url: https://www.uber.com/ca/en/careers/list/
+  platform_hint: Uber Careers
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: Uber Careers, but the underlying board URL
+    was not detected'
+- name: Airbnb
+  careers_url: https://careers.airbnb.com/positions/
+  platform_hint: Airbnb Careers
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: Airbnb Careers, but the underlying board
+    URL was not detected'
+- name: Lyft
+  careers_url: https://www.lyft.com/careers
+  platform_hint: Lyft Careers
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: Lyft Careers, but the underlying board URL
+    was not detected'
+- name: Stripe
+  careers_url: https://stripe.com/jobs/search
+  platform_hint: Stripe Jobs
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: Stripe Jobs, but the underlying board URL
+    was not detected'
+- name: Databricks
+  careers_url: https://www.databricks.com/company/careers/open-positions
+  platform_hint: Databricks Careers
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: Databricks Careers, but the underlying board
+    URL was not detected'
+- name: Snowflake
+  careers_url: https://careers.snowflake.com/us/en/search-results
+  platform_hint: Snowflake Careers
+  enabled: true
+  connector: ashby
+  board_name: snowflake
+  discovery_status: resolved
+  discovered_url: https://jobs.ashbyhq.com/snowflake/fa33b692-0ce3-43e2-a2f7-1c3fb7ab82ab
+  validation_status: valid
+  validation_error: null
+  last_job_count: 407
+- name: Palantir Technologies
+  careers_url: https://www.palantir.com/careers/open-positions/
+  platform_hint: Palantir Careers
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: Palantir Careers, but the underlying board
+    URL was not detected'
+- name: Adobe
+  careers_url: https://careers.adobe.com/
+  platform_hint: Adobe Careers
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: Adobe Careers, but the underlying board
+    URL was not detected'
+- name: Salesforce
+  careers_url: https://careers.salesforce.com/
+  platform_hint: Salesforce Careers
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: Salesforce Careers, but the underlying board
+    URL was not detected'
+- name: Atlassian
+  careers_url: https://www.atlassian.com/company/careers
+  platform_hint: Greenhouse
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: Greenhouse, but the underlying board URL
+    was not detected'
+- name: Intuit
+  careers_url: https://jobs.intuit.com/
+  platform_hint: Intuit Careers
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: Intuit Careers, but the underlying board
+    URL was not detected'
+- name: Oracle
+  careers_url: https://www.oracle.com/careers/
+  platform_hint: Oracle Careers
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: Oracle Careers, but the underlying board
+    URL was not detected'
+- name: Cisco
+  careers_url: https://jobs.cisco.com/
+  platform_hint: Cisco Careers
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: Cisco Careers, but the underlying board
+    URL was not detected'
+- name: IBM
+  careers_url: https://www.ibm.com/careers/
+  platform_hint: IBM Careers
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: IBM Careers, but the underlying board URL
+    was not detected'
+- name: SAP
+  careers_url: https://jobs.sap.com/
+  platform_hint: SuccessFactors
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: SuccessFactors, but the underlying board
+    URL was not detected'
+- name: ServiceNow
+  careers_url: https://careers.servicenow.com/jobs/
+  platform_hint: ServiceNow Careers
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: ServiceNow Careers, but the underlying board
+    URL was not detected'
+- name: Workday
+  careers_url: https://workday.wd5.myworkdayjobs.com/Workday
+  platform_hint: Workday
+  enabled: true
+  connector: workday
+  api_url: https://workday.wd5.myworkdayjobs.com/wday/cxs/workday/Workday/jobs
+  public_base_url: https://workday.wd5.myworkdayjobs.com/en-US/Workday
+  discovery_status: resolved
+  validation_status: valid
+  validation_error: null
+  last_job_count: 40
+- name: Twilio
+  careers_url: https://www.twilio.com/company/jobs
+  platform_hint: Greenhouse
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: Greenhouse, but the underlying board URL
+    was not detected'
+- name: Cloudflare
+  careers_url: https://www.cloudflare.com/careers/jobs/
+  platform_hint: Greenhouse
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: Greenhouse, but the underlying board URL
+    was not detected'
+- name: GitHub
+  careers_url: https://www.github.careers/
+  platform_hint: GitHub Careers
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: GitHub Careers, but the underlying board
+    URL was not detected'
+- name: GitLab
+  careers_url: https://about.gitlab.com/jobs/
+  platform_hint: Greenhouse
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: Greenhouse, but the underlying board URL
+    was not detected'
+- name: MongoDB
+  careers_url: https://www.mongodb.com/company/careers
+  platform_hint: Greenhouse
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: Greenhouse, but the underlying board URL
+    was not detected'
+- name: Elastic
+  careers_url: https://www.elastic.co/careers
+  platform_hint: Greenhouse
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: Greenhouse, but the underlying board URL
+    was not detected'
+- name: Confluent
+  careers_url: https://careers.confluent.io/
+  platform_hint: Greenhouse
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: Greenhouse, but the underlying board URL
+    was not detected'
+- name: HashiCorp
+  careers_url: https://www.hashicorp.com/careers
+  platform_hint: Greenhouse
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: Greenhouse, but the underlying board URL
+    was not detected'
+- name: Synopsys
+  careers_url: https://careers.synopsys.com/
+  platform_hint: Workday
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: Workday, but the underlying board URL was
+    not detected'
+- name: Cadence Design Systems
+  careers_url: https://cadence.wd1.myworkdayjobs.com/External_Careers
+  platform_hint: Workday
+  connector: workday
+  api_url: https://cadence.wd1.myworkdayjobs.com/wday/cxs/cadence/External_Careers/jobs
+  public_base_url: https://cadence.wd1.myworkdayjobs.com/en-US/External_Careers
+  enabled: true
+  validation_status: valid
+  validation_error: null
+  last_job_count: 40
+- name: Autodesk
+  careers_url: https://www.autodesk.com/careers
+  platform_hint: Workday
+  enabled: true
+  connector: workday
+  api_url: https://autodesk.wd1.myworkdayjobs.com/wday/cxs/autodesk/Ext/jobs
+  public_base_url: https://autodesk.wd1.myworkdayjobs.com/en-US/Ext
+  discovery_status: resolved
+  discovered_url: https://autodesk.wd1.myworkdayjobs.com/Ext
+  validation_status: valid
+  validation_error: null
+  last_job_count: 40
+- name: AMD
+  careers_url: https://careers.amd.com/
+  platform_hint: Workday
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: Workday, but the underlying board URL was
+    not detected'
+- name: Intel
+  careers_url: https://jobs.intel.com/
+  platform_hint: Intel Careers
+  enabled: true
+  connector: workday
+  api_url: https://intel.wd1.myworkdayjobs.com/wday/cxs/intel/External/jobs
+  public_base_url: https://intel.wd1.myworkdayjobs.com/en-US/External
+  discovery_status: resolved
+  discovered_url: https://intel.wd1.myworkdayjobs.com/External/page/6042070b79e01001f04fa9b468070000
+  validation_status: valid
+  validation_error: null
+  last_job_count: 40
+- name: Qualcomm
+  careers_url: https://www.qualcomm.com/company/careers
+  platform_hint: Phenom
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: Phenom, but the underlying board URL was
+    not detected'
+- name: Arm
+  careers_url: https://careers.arm.com/
+  platform_hint: Workday
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: Workday, but the underlying board URL was
+    not detected'
+- name: Juniper Networks
+  careers_url: https://careers.juniper.net/
+  platform_hint: Workday
+  enabled: true
+  connector: workday
+  api_url: https://hpe.wd5.myworkdayjobs.com/wday/cxs/hpe/Jobsathpe/jobs
+  public_base_url: https://hpe.wd5.myworkdayjobs.com/en-US/Jobsathpe
+  discovery_status: resolved
+  discovered_url: https://hpe.wd5.myworkdayjobs.com/Jobsathpe/job/Bengaluru-Karntaka-India/Software-Engineer-Staff_1191918-2/apply
+  validation_status: valid
+  validation_error: null
+  last_job_count: 40
+- name: NetApp
+  careers_url: https://careers.netapp.com/
+  platform_hint: Workday
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: Workday, but the underlying board URL was
+    not detected'
+- name: Pure Storage
+  careers_url: https://careers.purestorage.com/
+  platform_hint: Greenhouse
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: Greenhouse, but the underlying board URL
+    was not detected'
+- name: MathWorks
+  careers_url: https://www.mathworks.com/company/jobs.html
+  platform_hint: MathWorks Careers
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: MathWorks Careers, but the underlying board
+    URL was not detected'
+- name: Garmin
+  careers_url: https://careers.garmin.com/
+  platform_hint: Garmin Careers
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: Garmin Careers, but the underlying board
+    URL was not detected'
+- name: Shopify
+  careers_url: https://www.shopify.com/careers
+  platform_hint: Shopify Careers
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: Shopify Careers, but the underlying board
+    URL was not detected'
+- name: Ada
+  careers_url: https://www.ada.cx/careers
+  platform_hint: Greenhouse
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: Greenhouse, but the underlying board URL
+    was not detected'
+- name: Clio
+  careers_url: https://www.clio.com/careers/
+  platform_hint: Greenhouse
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: Greenhouse, but the underlying board URL
+    was not detected'
+- name: PointClickCare
+  careers_url: https://jobs.pointclickcare.com/
+  platform_hint: Workday
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: Workday, but the underlying board URL was
+    not detected'
+- name: OpenText
+  careers_url: https://careers.opentext.com/
+  platform_hint: Workday
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: Workday, but the underlying board URL was
+    not detected'
+- name: GeoComply
+  careers_url: https://www.geocomply.com/careers/all-jobs/
+  platform_hint: Custom Careers
+  connector: unsupported
+  enabled: false
+- name: Arctic Wolf
+  careers_url: https://arcticwolf.com/company/careers/
+  platform_hint: Greenhouse
+  enabled: true
+  connector: workday
+  api_url: https://arcticwolf.wd1.myworkdayjobs.com/wday/cxs/arcticwolf/External/jobs
+  public_base_url: https://arcticwolf.wd1.myworkdayjobs.com/en-US/External
+  discovery_status: resolved
+  discovered_url: https://arcticwolf.wd1.myworkdayjobs.com/External
+  validation_status: valid
+  validation_error: null
+  last_job_count: 128
+- name: Faire
+  careers_url: https://www.faire.com/careers
+  platform_hint: Greenhouse
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: Greenhouse, but the underlying board URL
+    was not detected'
+- name: Clearco
+  careers_url: https://clear.co/careers
+  platform_hint: Greenhouse
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: Greenhouse, but the underlying board URL
+    was not detected'
+- name: ThinkOn
+  careers_url: https://www.thinkon.com/careers/
+  platform_hint: null
+  enabled: false
+  connector: unsupported
+  discovery_status: No supported ATS platform was detected
+- name: Kinaxis
+  careers_url: https://www.kinaxis.com/en/careers
+  platform_hint: Workday
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: Workday, but the underlying board URL was
+    not detected'
+- name: BlackBerry
+  careers_url: https://www.blackberry.com/us/en/company/careers
+  platform_hint: Workday
+  enabled: true
+  connector: workday
+  api_url: https://bb.wd3.myworkdayjobs.com/wday/cxs/bb/BlackBerry/jobs
+  public_base_url: https://bb.wd3.myworkdayjobs.com/en-US/BlackBerry
+  discovery_status: resolved
+  discovered_url: https://bb.wd3.myworkdayjobs.com/BlackBerry/jobs
+  validation_status: valid
+  validation_error: null
+  last_job_count: 40
+- name: Descartes Systems Group
+  careers_url: https://www.descartes.com/careers
+  platform_hint: null
+  enabled: false
+  connector: unsupported
+  discovery_status: No supported ATS platform was detected
+- name: Visier
+  careers_url: https://www.visier.com/company/careers/
+  platform_hint: Greenhouse
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: Greenhouse, but the underlying board URL
+    was not detected'
+- name: Loblaw Digital
+  careers_url: https://www.loblawdigital.co/careers
+  platform_hint: Greenhouse
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: Greenhouse, but the underlying board URL
+    was not detected'
+- name: ecobee
+  careers_url: https://www.ecobee.com/en-ca/careers/
+  platform_hint: Greenhouse
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: Greenhouse, but the underlying board URL
+    was not detected'
+- name: Hootsuite
+  careers_url: https://www.hootsuite.com/about/careers
+  platform_hint: Greenhouse
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: Greenhouse, but the underlying board URL
+    was not detected'
+- name: RBC
+  careers_url: https://jobs.rbc.com/
+  platform_hint: Workday
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: Workday, but the underlying board URL was
+    not detected'
+- name: TD Bank
+  careers_url: https://careers.td.com/
+  platform_hint: Workday
+  enabled: true
+  connector: workday
+  api_url: https://td.wd3.myworkdayjobs.com/wday/cxs/td/TD_Bank_Careers/jobs
+  public_base_url: https://td.wd3.myworkdayjobs.com/en-US/TD_Bank_Careers
+  discovery_status: resolved
+  discovered_url: https://td.wd3.myworkdayjobs.com/en-US/TD_Bank_Careers
+  validation_status: valid
+  validation_error: null
+  last_job_count: 40
+- name: BMO
+  careers_url: https://jobs.bmo.com/ca/en
+  platform_hint: BMO Careers
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: BMO Careers, but the underlying board URL
+    was not detected'
+- name: Scotiabank
+  careers_url: https://jobs.scotiabank.com/
+  platform_hint: SuccessFactors
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: SuccessFactors, but the underlying board
+    URL was not detected'
+- name: CIBC
+  careers_url: https://www.cibc.com/en/about-cibc/careers.html
+  platform_hint: Workday
+  enabled: true
+  connector: workday
+  api_url: https://cibc.wd3.myworkdayjobs.com/wday/cxs/cibc/search/jobs
+  public_base_url: https://cibc.wd3.myworkdayjobs.com/en-US/search
+  discovery_status: resolved
+  discovered_url: https://cibc.wd3.myworkdayjobs.com/search?q=banking+centre&jobFamilyGroup=4bbe6c74e8a7011d49ad22a881011310&jobFamilyGroup=4bbe6c74e8a70132da752ca881011910&Country=a30a87ed25634629aa6c3958aa2b91ea
+  validation_status: valid
+  validation_error: null
+  last_job_count: 40
+- name: National Bank of Canada
+  careers_url: https://jobs.nbc.ca/
+  platform_hint: NBC Careers
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: NBC Careers, but the underlying board URL
+    was not detected'
+- name: EQ Bank
+  careers_url: https://eqbcareers.com/
+  platform_hint: EQB Careers
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: EQB Careers, but the underlying board URL
+    was not detected'
+- name: Robinhood
+  careers_url: https://careers.robinhood.com/
+  platform_hint: Greenhouse
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: Greenhouse, but the underlying board URL
+    was not detected'
+- name: Plaid
+  careers_url: https://plaid.com/careers/
+  platform_hint: Greenhouse
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: Greenhouse, but the underlying board URL
+    was not detected'
+- name: Affirm
+  careers_url: https://www.affirm.com/careers
+  platform_hint: Greenhouse
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: Greenhouse, but the underlying board URL
+    was not detected'
+- name: Brex
+  careers_url: https://www.brex.com/careers
+  platform_hint: Greenhouse
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: Greenhouse, but the underlying board URL
+    was not detected'
+- name: Mercury
+  careers_url: https://mercury.com/careers
+  platform_hint: Ashby
+  enabled: true
+  connector: greenhouse
+  board_token: mercury
+  discovery_status: resolved
+  discovered_url: https://job-boards.greenhouse.io/mercury/jobs/5775685004
+  validation_status: valid
+  validation_error: null
+  last_job_count: 54
+- name: Coinbase
+  careers_url: https://www.coinbase.com/careers
+  platform_hint: Ashby
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: Ashby, but the underlying board URL was
+    not detected'
+- name: Block
+  careers_url: https://block.xyz/careers
+  platform_hint: Greenhouse
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: Greenhouse, but the underlying board URL
+    was not detected'
+- name: PayPal
+  careers_url: https://careers.pypl.com/
+  platform_hint: Workday
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: Workday, but the underlying board URL was
+    not detected'
+- name: Visa
+  careers_url: https://corporate.visa.com/en/careers.html
+  platform_hint: Workday
+  enabled: true
+  connector: workday
+  api_url: https://visa.wd5.myworkdayjobs.com/wday/cxs/visa/Visa/jobs
+  public_base_url: https://visa.wd5.myworkdayjobs.com/en-US/Visa
+  discovery_status: resolved
+  discovered_url: https://visa.wd5.myworkdayjobs.com/Visa
+  validation_status: valid
+  validation_error: null
+  last_job_count: 40
+- name: Mastercard
+  careers_url: https://careers.mastercard.com/
+  platform_hint: Workday
+  enabled: true
+  connector: workday
+  api_url: https://mastercard.wd1.myworkdayjobs.com/wday/cxs/mastercard/CorporateCareers/jobs
+  public_base_url: https://mastercard.wd1.myworkdayjobs.com/en-US/CorporateCareers
+  discovery_status: resolved
+  discovered_url: https://mastercard.wd1.myworkdayjobs.com/CorporateCareers
+  validation_status: valid
+  validation_error: null
+  last_job_count: 40
+- name: Electronic Arts
+  careers_url: https://www.ea.com/careers
+  platform_hint: EA Careers
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: EA Careers, but the underlying board URL
+    was not detected'
+- name: Ubisoft
+  careers_url: https://www.ubisoft.com/en-us/company/careers
+  platform_hint: SmartRecruiters
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: SmartRecruiters, but the underlying board
+    URL was not detected'
+- name: Riot Games
+  careers_url: https://www.riotgames.com/en/work-with-us
+  platform_hint: Greenhouse
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: Greenhouse, but the underlying board URL
+    was not detected'
+- name: Epic Games
+  careers_url: https://www.epicgames.com/site/en-US/careers
+  platform_hint: Greenhouse
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: Greenhouse, but the underlying board URL
+    was not detected'
+- name: Unity
+  careers_url: https://careers.unity.com/
+  platform_hint: Greenhouse
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: Greenhouse, but the underlying board URL
+    was not detected'
+- name: Roblox
+  careers_url: https://careers.roblox.com/
+  platform_hint: Greenhouse
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: Greenhouse, but the underlying board URL
+    was not detected'
+- name: Discord
+  careers_url: https://discord.com/jobs
+  platform_hint: Ashby
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: Ashby, but the underlying board URL was
+    not detected'
+- name: Valve
+  careers_url: https://www.valvesoftware.com/en/jobs
+  platform_hint: null
+  enabled: false
+  connector: unsupported
+  discovery_status: No supported ATS platform was detected
+- name: Behaviour Interactive
+  careers_url: https://www.bhvr.com/careers/
+  platform_hint: null
+  enabled: false
+  connector: unsupported
+  discovery_status: No supported ATS platform was detected
+- name: Nintendo
+  careers_url: https://careers.nintendo.com/
+  platform_hint: iCIMS
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: iCIMS, but the underlying board URL was
+    not detected'
+- name: Sony Interactive Entertainment (PlayStation)
+  careers_url: https://careers.playstation.com/
+  platform_hint: PlayStation Careers
+  enabled: true
+  connector: greenhouse
+  board_token: haven
+  discovery_status: resolved
+  discovered_url: https://job-boards.greenhouse.io/haven/jobs/5832237004
+  validation_status: valid
+  validation_error: null
+  last_job_count: 7
+- name: Activision
+  careers_url: https://careers.activision.com/
+  platform_hint: Workday
+  enabled: true
+  connector: workday
+  api_url: https://xboxgaming.wd1.myworkdayjobs.com/wday/cxs/xboxgaming/CentralTech/jobs
+  public_base_url: https://xboxgaming.wd1.myworkdayjobs.com/en-US/CentralTech
+  discovery_status: resolved
+  discovered_url: https://xboxgaming.wd1.myworkdayjobs.com/CentralTech/
+  validation_status: valid
+  validation_error: null
+  last_job_count: 8
+- name: Blizzard Entertainment
+  careers_url: https://careers.blizzard.com/
+  platform_hint: Workday
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: Workday, but the underlying board URL was
+    not detected'
+- name: King
+  careers_url: https://careers.king.com/
+  platform_hint: SmartRecruiters
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: SmartRecruiters, but the underlying board
+    URL was not detected'
+- name: Bungie
+  careers_url: https://careers.bungie.com/
+  platform_hint: Greenhouse
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: Greenhouse, but the underlying board URL
+    was not detected'
+- name: Insomniac Games
+  careers_url: https://insomniac.games/careers/
+  platform_hint: null
+  enabled: false
+  connector: unsupported
+  discovery_status: No supported ATS platform was detected
+- name: Rockstar Games
+  careers_url: https://www.rockstargames.com/careers
+  platform_hint: Workday
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: Workday, but the underlying board URL was
+    not detected'
+- name: Take-Two Interactive
+  careers_url: https://www.take2games.com/careers/
+  platform_hint: null
+  enabled: false
+  connector: unsupported
+  discovery_status: No supported ATS platform was detected
+- name: CD PROJEKT
+  careers_url: https://jobs.cdprojektred.com/
+  platform_hint: Greenhouse
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: Greenhouse, but the underlying board URL
+    was not detected'
+- name: Accenture
+  careers_url: https://www.accenture.com/ca-en/careers
+  platform_hint: Workday
+  enabled: true
+  connector: workday
+  api_url: https://accenture.wd103.myworkdayjobs.com/wday/cxs/accenture/AccentureCareers/jobs
+  public_base_url: https://accenture.wd103.myworkdayjobs.com/en-US/AccentureCareers
+  discovery_status: resolved
+  discovered_url: https://accenture.wd103.myworkdayjobs.com/AccentureCareers/userHome
+  validation_status: valid
+  validation_error: null
+  last_job_count: 40
+- name: Deloitte
+  careers_url: https://www2.deloitte.com/ca/en/careers.html
+  platform_hint: Phenom
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: Phenom, but the underlying board URL was
+    not detected'
+- name: PwC
+  careers_url: https://www.pwc.com/ca/en/careers.html
+  platform_hint: Workday
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: Workday, but the underlying board URL was
+    not detected'
+- name: EY
+  careers_url: https://www.ey.com/en_ca/careers
+  platform_hint: Phenom
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: Phenom, but the underlying board URL was
+    not detected'
+- name: KPMG
+  careers_url: https://kpmg.com/ca/en/home/careers.html
+  platform_hint: Phenom
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: Phenom, but the underlying board URL was
+    not detected'
+- name: CGI
+  careers_url: https://cgi.njoyn.com/
+  platform_hint: Njoyn
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: Njoyn, but the underlying board URL was
+    not detected'
+- name: Bell
+  careers_url: https://jobs.bell.ca/
+  platform_hint: Workday
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: Workday, but the underlying board URL was
+    not detected'
+- name: TELUS
+  careers_url: https://www.telus.com/en/careers
+  platform_hint: Workday
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: Workday, but the underlying board URL was
+    not detected'
+- name: Rogers Communications
+  careers_url: https://jobs.rogers.com/
+  platform_hint: Workday
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: Workday, but the underlying board URL was
+    not detected'
+- name: Ericsson
+  careers_url: https://www.ericsson.com/en/careers
+  platform_hint: SmartRecruiters
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: SmartRecruiters, but the underlying board
+    URL was not detected'
+- name: Nokia
+  careers_url: https://www.nokia.com/about-us/careers/
+  platform_hint: Workday
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: Workday, but the underlying board URL was
+    not detected'
+- name: OpenAI
+  careers_url: https://openai.com/careers/
+  platform_hint: OpenAI Careers
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: OpenAI Careers, but the underlying board
+    URL was not detected'
+- name: xAI
+  careers_url: https://x.ai/careers
+  platform_hint: xAI Careers
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: xAI Careers, but the underlying board URL
+    was not detected'
+- name: Vercel
+  careers_url: https://vercel.com/careers
+  platform_hint: Greenhouse
+  enabled: true
+  connector: greenhouse
+  board_token: vercel
+  discovery_status: resolved
+  discovered_url: https://job-boards.greenhouse.io/vercel/jobs/5999792004\
+  validation_status: valid
+  validation_error: null
+  last_job_count: 78
+- name: Supabase
+  careers_url: https://supabase.com/careers
+  platform_hint: Supabase Careers
+  enabled: true
+  connector: ashby
+  board_name: supabase
+  discovery_status: resolved
+  discovered_url: https://jobs.ashbyhq.com/supabase/d5573afa-636c-4219-832f-386f498243bf
+  validation_status: valid
+  validation_error: null
+  last_job_count: 55
+- name: Perplexity
+  careers_url: https://www.perplexity.ai/careers
+  platform_hint: Ashby
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: Ashby, but the underlying board URL was
+    not detected'
+- name: Replicate
+  careers_url: https://replicate.com/careers
+  platform_hint: null
+  enabled: false
+  connector: unsupported
+  discovery_status: No supported ATS platform was detected
+- name: Ramp
+  careers_url: https://ramp.com/careers
+  platform_hint: Ashby
+  enabled: true
+  connector: ashby
+  board_name: ramp
+  discovery_status: resolved
+  discovered_url: https://jobs.ashbyhq.com/ramp/34413f8d-26bf-4bbc-8ade-eb309a0e2245\
+  validation_status: valid
+  validation_error: null
+  last_job_count: 121
+- name: Linear
+  careers_url: https://linear.app/careers
+  platform_hint: Ashby
+  enabled: true
+  connector: ashby
+  board_name: Linear
+  discovery_status: resolved
+  discovered_url: https://jobs.ashbyhq.com/Linear/c21af93e-210f-4969-8eaa-90fb16a5b720\
+  validation_status: valid
+  validation_error: null
+  last_job_count: 24
+- name: Notion
+  careers_url: https://www.notion.so/careers
+  platform_hint: Ashby
+  enabled: true
+  connector: ashby
+  board_name: notion
+  discovery_status: resolved
+  discovered_url: https://jobs.ashbyhq.com/notion/6ccbc30c-2de0-4395-af14-3641cd15961b
+  validation_status: valid
+  validation_error: null
+  last_job_count: 141
+- name: Figma
+  careers_url: https://www.figma.com/careers/
+  platform_hint: Greenhouse
+  enabled: true
+  connector: greenhouse
+  board_token: figma
+  discovery_status: resolved
+  discovered_url: https://boards.greenhouse.io/figma/jobs/5813967004?gh_jid=5813967004
+  validation_status: valid
+  validation_error: null
+  last_job_count: 170
+- name: Glean
+  careers_url: https://www.glean.com/careers
+  platform_hint: Ashby
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: Ashby, but the underlying board URL was
+    not detected'
+- name: Hex
+  careers_url: https://hex.tech/careers
+  platform_hint: Ashby
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: Ashby, but the underlying board URL was
+    not detected'
+- name: Tesla
+  careers_url: https://www.tesla.com/careers
+  platform_hint: Tesla Careers
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: Tesla Careers, but the underlying board
+    URL was not detected'
+- name: SpaceX
+  careers_url: https://www.spacex.com/careers/
+  platform_hint: SpaceX Careers
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: SpaceX Careers, but the underlying board
+    URL was not detected'
+- name: Rivian
+  careers_url: https://careers.rivian.com/
+  platform_hint: Workday
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: Workday, but the underlying board URL was
+    not detected'
+- name: Lucid Motors
+  careers_url: https://careers.lucidmotors.com/
+  platform_hint: Workday
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: Workday, but the underlying board URL was
+    not detected'
+- name: Waymo
+  careers_url: https://waymo.com/careers/
+  platform_hint: Greenhouse
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: Greenhouse, but the underlying board URL
+    was not detected'
+- name: Zoox
+  careers_url: https://www.zoox.com/careers/
+  platform_hint: Greenhouse
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: Greenhouse, but the underlying board URL
+    was not detected'
+- name: Cruise
+  careers_url: https://getcruise.com/careers/
+  platform_hint: null
+  enabled: false
+  connector: unsupported
+  discovery_status: No supported ATS platform was detected
+- name: Anduril
+  careers_url: https://www.anduril.com/careers/
+  platform_hint: Greenhouse
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: Greenhouse, but the underlying board URL
+    was not detected'
+- name: Canva
+  careers_url: https://www.canva.com/careers/
+  platform_hint: Greenhouse
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: Greenhouse, but the underlying board URL
+    was not detected'
+- name: Red Hat
+  careers_url: https://redhat.wd5.myworkdayjobs.com/Jobs
+  platform_hint: Red Hat Careers
+  connector: workday
+  api_url: https://redhat.wd5.myworkdayjobs.com/wday/cxs/redhat/Jobs/jobs
+  public_base_url: https://redhat.wd5.myworkdayjobs.com/en-US/Jobs
+  enabled: true
+  validation_status: valid
+  validation_error: null
+  last_job_count: 40
+- name: Box
+  careers_url: https://www.box.com/careers
+  platform_hint: Greenhouse
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: Greenhouse, but the underlying board URL
+    was not detected'
+- name: Okta
+  careers_url: https://www.okta.com/company/careers/
+  platform_hint: Greenhouse
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: Greenhouse, but the underlying board URL
+    was not detected'
+- name: Splunk
+  careers_url: https://www.splunk.com/en_us/careers.html
+  platform_hint: Cisco Careers
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: Cisco Careers, but the underlying board
+    URL was not detected'
+- name: New Relic
+  careers_url: https://newrelic.com/about/careers
+  platform_hint: Greenhouse
+  enabled: true
+  connector: greenhouse
+  board_token: newrelic
+  discovery_status: resolved
+  discovered_url: https://job-boards.greenhouse.io/newrelic/jobs/5142016008
+  validation_status: valid
+  validation_error: null
+  last_job_count: 62
+- name: Redfin
+  careers_url: https://www.redfin.com/careers
+  platform_hint: Greenhouse
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: Greenhouse, but the underlying board URL
+    was not detected'
+- name: Expedia Group
+  careers_url: https://careers.expediagroup.com/
+  platform_hint: Workday
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: Workday, but the underlying board URL was
+    not detected'
+- name: Zillow
+  careers_url: https://www.zillow.com/careers/
+  platform_hint: Greenhouse
+  enabled: true
+  connector: workday
+  api_url: https://zillow.wd5.myworkdayjobs.com/wday/cxs/zillow/Zillow_Group_External/jobs
+  public_base_url: https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External
+  discovery_status: resolved
+  discovered_url: https://zillow.wd5.myworkdayjobs.com/Zillow_Group_External
+  validation_status: valid
+  validation_error: null
+  last_job_count: 40
+- name: Yelp
+  careers_url: https://www.yelp.careers/
+  platform_hint: Greenhouse
+  enabled: false
+  connector: unresolved
+  discovery_status: 'Platform hint found: Greenhouse, but the underlying board URL
+    was not detected'
