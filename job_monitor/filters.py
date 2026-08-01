@@ -6,11 +6,13 @@ from models import Job
 # Internship terms must appear in the job title
 INTERNSHIP_PATTERNS = [
     r"\bintern\b",
-    r"\binternship\b",
+    r"\binternships?\b",
     r"\bco[\s-]?op\b",
     r"\bstudent developer\b",
     r"\bstudent engineer\b",
+    r"\bstudent researcher\b",
     r"\bnew grad(?:uate)?\b",
+    r"\bcollege grad(?:uate)?\b",
 ]
 
 
@@ -58,6 +60,8 @@ TECH_TITLE_PATTERNS = [
 EXCLUDED_TITLE_PATTERNS = [
     r"\bmarketing\b",
     r"\bproduct marketing\b",
+    r"\bproduct management\b",
+    r"\bproduct manager\b",
     r"\brecruiter\b",
     r"\brecruiting\b",
     r"\btalent acquisition\b",
@@ -74,6 +78,8 @@ EXCLUDED_TITLE_PATTERNS = [
     r"\blegal\b",
     r"\bcustomer success\b",
     r"\bgraphic design\b",
+    r"\bproduct design(?:er)?\b",
+    r"\bdeployment strategist\b",
     r"\bcontent\b",
     r"\bconsulting\b",
     r"\bstrategy\b",
@@ -208,6 +214,49 @@ def is_canada_or_us_location(location: str | None) -> bool:
 
     normalized_location = location.strip().lower()
 
+    # An explicit ISO country suffix takes precedence over ambiguous
+    # city/region names such as Victoria, Australia.
+    country_suffix = re.search(
+        r",\s*([a-z]{3})$",
+        normalized_location,
+    )
+    if country_suffix:
+        return country_suffix.group(1) in {"can", "usa"}
+
+    # Explicit foreign country names take precedence over state/province
+    # words embedded earlier in the location, such as Baja California.
+    if re.search(
+        r",\s*(?:mexico|israel)$",
+        normalized_location,
+    ):
+        return False
+
+    # Some ATS feeds return ISO alpha-2 country codes. Reject a bare
+    # foreign code, or a foreign suffix that cannot be a Canadian
+    # province or US state.
+    alpha_two_suffix = re.search(
+        r"(?:^|[,;]\s*)([a-z]{2})$",
+        normalized_location,
+    )
+    if alpha_two_suffix:
+        code = alpha_two_suffix.group(1)
+        north_american_region_codes = {
+            "ab", "ak", "al", "ar", "az", "bc", "ca", "co", "ct",
+            "dc", "de", "fl", "ga", "hi", "ia", "id", "il", "in",
+            "ks", "ky", "la", "ma", "mb", "md", "me", "mi", "mn",
+            "mo", "ms", "mt", "nb", "nc", "nd", "ne", "nh", "nj",
+            "nl", "nm", "ns", "nt", "nu", "nv", "ny", "oh", "ok",
+            "on", "or", "pa", "pe", "qc", "ri", "sc", "sd", "sk",
+            "tn", "tx", "ut", "va", "vt", "wa", "wi", "wv", "wy",
+            "yt",
+        }
+        if normalized_location == code:
+            return code in {"ca", "us"}
+        if code in {"ca", "us"}:
+            return True
+        if code not in north_american_region_codes:
+            return False
+
     # Match common Canadian and US location names
     if any(
         value in normalized_location
@@ -227,6 +276,11 @@ def is_canada_or_us_location(location: str | None) -> bool:
 
 def is_relevant_job(job: Job) -> bool:
     title = job.title.strip()
+    technical_text = " ".join(
+        value
+        for value in (title, job.description or "")
+        if value
+    )
 
     # Reject non-technical roles
     if matches_any_pattern(
@@ -251,7 +305,7 @@ def is_relevant_job(job: Job) -> bool:
 
     # Require a technical term in the title
     if not matches_any_pattern(
-        title,
+        technical_text,
         TECH_TITLE_PATTERNS,
     ):
         return False

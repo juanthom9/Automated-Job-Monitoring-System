@@ -6,6 +6,7 @@ from company_loader import (
     add_or_update_company,
     load_all_companies,
 )
+from coverage import write_coverage_report
 
 
 def add_company(
@@ -69,6 +70,12 @@ def import_companies(file_path: str) -> None:
     print(f"Lines skipped: {results['skipped']}")
 
 
+def coverage_report(output_path: str) -> None:
+    companies = load_all_companies()
+    path = write_coverage_report(companies, output_path)
+    print(f"Coverage report written to: {path}")
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(
         description="Manage internship job-monitor companies"
@@ -115,6 +122,16 @@ def main() -> None:
         help="Path to the company job-board text file",
     )
 
+    coverage_parser = subparsers.add_parser(
+        "coverage-report",
+        help="Write a non-mutating company coverage report",
+    )
+    coverage_parser.add_argument(
+        "--output",
+        default="coverage-report.md",
+        help="Markdown output path",
+    )
+
     args = parser.parse_args()
 
     if args.command == "add-company":
@@ -130,6 +147,9 @@ def main() -> None:
         import_companies(
             file_path=args.file,
         )
+
+    elif args.command == "coverage-report":
+        coverage_report(args.output)
 
 
 if __name__ == "__main__":

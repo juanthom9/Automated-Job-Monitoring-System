@@ -4,6 +4,13 @@ from connectors.ashby import AshbyConnector
 from connectors.lever import LeverConnector
 from connectors.greenhouse import GreenhouseConnector
 from connectors.workday import WorkdayConnector
+from connectors.smartrecruiters import SmartRecruitersConnector
+from connectors.phenom import PhenomConnector
+from connectors.amazon import AmazonConnector
+from connectors.apple import AppleConnector
+from connectors.google import GoogleConnector
+from connectors.netflix import NetflixConnector
+from connectors.microsoft import MicrosoftConnector
 
 def create_connector(company: dict[str, Any]):
     # Read the connector name from companies.yaml
@@ -33,6 +40,53 @@ def create_connector(company: dict[str, Any]):
             company_name=company["name"],
             api_url=company["api_url"],
             public_base_url=company["public_base_url"],
+            search_terms=company.get("search_terms"),
+        )
+
+    if connector_name == "smartrecruiters":
+        return SmartRecruitersConnector(
+            company_name=company["name"],
+            company_identifier=company["company_identifier"],
+        )
+
+    if connector_name == "phenom":
+        return PhenomConnector(
+            company_name=company["name"],
+            api_url=company["api_url"],
+            query_params=company.get("query_params"),
+        )
+
+    if connector_name == "amazon":
+        return AmazonConnector(
+            company_name=company["name"],
+            search_query=company.get("search_query", "intern"),
+        )
+
+    if connector_name == "apple":
+        return AppleConnector(
+            company_name=company["name"],
+        )
+
+    if connector_name == "google":
+        return GoogleConnector(
+            company_name=company["name"],
+        )
+
+    if connector_name == "netflix":
+        return NetflixConnector(
+            company_name=company["name"],
+        )
+
+    if connector_name == "microsoft":
+        return MicrosoftConnector(
+            company_name=company["name"],
+        )
+
+    if connector_name == "eightfold":
+        return MicrosoftConnector(
+            company_name=company["name"],
+            domain=company["domain"],
+            base_url=company["base_url"],
         )
 
     raise ValueError(

@@ -122,6 +122,8 @@ def find_job_board_urls(careers_url: str) -> list[str]:
         "boards.greenhouse.io",
         "job-boards.greenhouse.io",
         "myworkdayjobs.com",
+        "careers.smartrecruiters.com",
+        "jobs.smartrecruiters.com",
     ]
 
     page_source = response.text
@@ -274,6 +276,30 @@ def detect_from_url(
         result["public_base_url"] = (
             f"https://{hostname}/en-US/{site_name}"
         )
+        result["enabled"] = True
+        result["discovery_status"] = "resolved"
+
+        return result
+
+    # SmartRecruiters
+    if "smartrecruiters.com" in hostname:
+        ignored_parts = {
+            "job",
+            "jobs",
+            "search",
+        }
+        identifier_parts = [
+            part
+            for part in path_parts
+            if part.lower() not in ignored_parts
+        ]
+
+        if not identifier_parts:
+            return None
+
+        result = company.copy()
+        result["connector"] = "smartrecruiters"
+        result["company_identifier"] = identifier_parts[0]
         result["enabled"] = True
         result["discovery_status"] = "resolved"
 

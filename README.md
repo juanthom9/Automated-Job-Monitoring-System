@@ -1,25 +1,48 @@
-# Automatic Internship Job Monitor
+# Automated Job Monitoring System
 
-A backend-only Python service that checks official company career pages, discovers common applicant-tracking systems, filters for technical internships/co-ops, stores seen jobs in PostgreSQL, and emails each newly detected match.
+A Python service that monitors official company career sources for computer-science-related internships and early-career roles in Canada and the United States.
 
-The supplied `companies.yaml` contains 144 official career-board URLs. The first successful check for a company creates a baseline and does **not** email existing jobs. Future newly discovered jobs are emailed once.
+The monitor collects postings through modular applicant-tracking-system connectors, applies configurable title and location filters, stores discovered jobs in PostgreSQL, and sends an email when a new matching position appears. It is designed to run automatically through GitHub Actions while avoiding duplicate notifications between runs.
 
-## What “automatic discovery” means
+## Features
 
-The detector follows redirects and inspects the career page for links or embedded URLs belonging to:
+- Monitors a YAML-configured catalog of company career sources.
+- Uses reusable connectors for shared applicant tracking systems and dedicated connectors where necessary.
+- Filters for software engineering, data, machine learning, infrastructure, security, research, and related early-career roles.
+- Limits results to Canada and the United States.
+- Excludes senior, leadership, sales, marketing, product-management, and other non-target positions.
+- Stores jobs and monitoring history in PostgreSQL or Supabase.
+- Prevents duplicate alerts with a persistent company and external-job-ID constraint.
+- Establishes a silent baseline on the first successful run so existing postings do not flood the inbox.
+- Sends HTML and plain-text alerts through Gmail SMTP.
+- Supports scheduled and manually triggered GitHub Actions runs.
+- Generates a coverage report distinguishing validated, unresolved, and unsupported sources.
 
-- Greenhouse
-- Lever
-- Ashby
-- Workday
+## How it works
 
-Direct platform URLs are recognized immediately. If no supported platform is found, the monitor uses a basic HTML fallback and logs a low-confidence result. Proprietary/JavaScript-heavy boards such as Google Careers, Microsoft Careers, Amazon Jobs, Apple Jobs, and some Phenom/SuccessFactors sites can require dedicated connectors later; automatic detection cannot turn every custom site into a reliable API.
+```text
+Configured career sources
+        -> ATS connectors
+        -> normalized job records
+        -> role and location filters
+        -> PostgreSQL deduplication
+        -> email alert for each new match
+```
 
-## 1. Open in VS Code
+Each connector converts its source into the same internal job model. This keeps filtering, persistence, and notification logic independent of the underlying hiring platform.
 
-Extract the project, then open the `job-monitor` folder in VS Code.
+## Technology
 
-## 2. Create the Python environment (Windows PowerShell)
+- Python
+- HTTPX and Beautiful Soup
+- PostgreSQL / Supabase
+- Gmail SMTP
+- GitHub Actions
+- YAML configuration
+
+## Local setup
+
+Create and activate a virtual environment from the repository root:
 
 ```powershell
 py -3.12 -m venv .venv
@@ -28,109 +51,86 @@ python -m pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-Select it with `Ctrl+Shift+P` → **Python: Select Interpreter** → `.venv`.
-
-## 3. Configure Supabase and Resend
-
-Copy `.env.example` to `.env`:
+Copy the example environment file:
 
 ```powershell
 Copy-Item .env.example .env
 ```
 
-Fill in:
+Configure the following values:
 
 ```env
-DATABASE_URL=your_supabase_session_pooler_connection_string
-RESEND_API_KEY=re_your_key
-ALERT_EMAIL=your_email@example.com
-FROM_EMAIL=Job Monitor <alerts@your_verified_domain.com>
+DATABASE_URL=your_postgresql_connection_string
+SMTP_EMAIL=your_gmail_address
+SMTP_PASSWORD=your_gmail_app_password
+ALERT_EMAIL=notification_recipient
 SEND_EXISTING_ON_FIRST_RUN=false
 REQUEST_TIMEOUT_SECONDS=30
 ```
 
-The program creates its database tables automatically. Never commit `.env`.
+Use a Gmail app password rather than your normal account password. Do not commit `.env`.
 
-## 4. Discover the platforms before deployment
-
-Run this locally:
+## Run the monitor
 
 ```powershell
-python manage.py discover-all
+python job_monitor\monitor.py
 ```
 
-This inspects every supplied URL and writes the detected connector/settings into `companies.yaml`. Review the output. `high` confidence generally means a supported ATS was identified; `low` means the generic HTML fallback will be used.
+Database tables are created automatically. By default, the first successful scan records matching jobs without sending alerts. Subsequent runs notify only for newly discovered matches.
 
-Run it again whenever a company changes its careers platform.
+## Manage sources
 
-## 5. Add a company later
-
-You only need its name and official careers/job-board URL:
+List configured sources:
 
 ```powershell
-python manage.py add-company --name "Example Company" --url "https://example.com/careers"
+python job_monitor\manage.py list-companies
 ```
 
-An optional hint can be supplied:
+Add or update a source:
 
 ```powershell
-python manage.py add-company --name "Example Company" --url "https://example.com/careers" --platform "Greenhouse"
+python job_monitor\manage.py add-company --name "Example" --url "https://example.com/careers"
 ```
 
-The command discovers the connector and adds or updates the company in `companies.yaml` with `enabled: true`.
-
-To disable a company, open `companies.yaml` and change:
-
-```yaml
-enabled: false
-```
-
-## 6. Test locally
+Generate the coverage report:
 
 ```powershell
-python main.py
+python job_monitor\manage.py coverage-report
 ```
 
-The first run records current matching roles as a baseline. Run it again to confirm there are no duplicate emails.
+Configuration lives in `job_monitor/companies.yaml`. A configured source is not assumed to work until its connector has been validated against the live career system.
 
-Run tests:
+## Filtering
+
+Filtering rules are defined in `job_monitor/filters.py`. A posting must:
+
+1. Identify an internship, co-op, student, new-graduate, or college-graduate role.
+2. Match a targeted technical field in its title or description.
+3. Have a supported Canadian or US location.
+4. Avoid excluded non-technical and senior title patterns.
+
+The rules are intentionally configurable rather than tied to one degree program or hiring season.
+
+## Tests
+
+Install the test runner and execute the suite from the repository root:
 
 ```powershell
 pip install pytest
-pytest
+pytest job_monitor\tests
 ```
 
-## 7. Keyword filtering
+## Automation
 
-Edit `job_monitor/filters.py`. A job must match both:
-
-1. an internship/student pattern (`intern`, `internship`, `co-op`, etc.), and
-2. a technical pattern (`software`, `developer`, `machine learning`, `data`, `security`, etc.).
-
-Senior and leadership titles are excluded.
-
-## 8. Deploy with GitHub Actions
-
-Create an empty GitHub repository and push the folder:
-
-```powershell
-git init
-git add .
-git commit -m "Build automatic internship monitor"
-git branch -M main
-git remote add origin YOUR_REPOSITORY_URL
-git push -u origin main
-```
-
-Add these GitHub Actions secrets under **Settings → Secrets and variables → Actions**:
+The included GitHub Actions workflow can run manually or on its configured schedule. Add these repository secrets before enabling scheduled monitoring:
 
 - `DATABASE_URL`
-- `RESEND_API_KEY`
+- `SMTP_EMAIL`
+- `SMTP_PASSWORD`
 - `ALERT_EMAIL`
-- `FROM_EMAIL`
 
-The included workflow requests a run every ten minutes. GitHub schedules may occasionally be delayed.
+Scheduled GitHub Actions runs are best-effort and may start later than the requested cron interval during periods of high demand.
 
-## Recommended rollout
+## Responsible access
 
-Do not trust all 144 sites immediately. First run `discover-all`, then enable/test supported high-confidence platforms in batches. Review GitHub Action logs for zero-job results or repeated errors. Custom career systems should receive dedicated connectors rather than relying indefinitely on generic HTML parsing.
+The project uses official public career pages and supported public job-board interfaces. Sources that prohibit automation, require permission, or actively block automated access remain disabled until an approved integration is available. The monitor does not submit job applications or bypass access controls.
