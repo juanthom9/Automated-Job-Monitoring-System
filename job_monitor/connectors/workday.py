@@ -15,23 +15,31 @@ class WorkdayConnector:
         api_url: str,
         public_base_url: str,
         search_terms: list[str] | None = None,
+        additional_sites: list[dict[str, str]] | None = None,
     ) -> None:
         # Save the company settings
         self.company_name = company_name
         self.api_url = api_url.rstrip("/")
         self.public_base_url = public_base_url.rstrip("/")
         self.search_terms = search_terms or [""]
+        self.sites = [
+            {"api_url": self.api_url, "public_base_url": self.public_base_url},
+            *(additional_sites or []),
+        ]
 
     def fetch_jobs(self) -> list[Job]:
         jobs: list[Job] = []
         seen_external_ids: set[str] = set()
 
-        for search_term in self.search_terms:
-            self._fetch_search(
-                search_term,
-                jobs,
-                seen_external_ids,
-            )
+        for site in self.sites:
+            for search_term in self.search_terms:
+                self._fetch_search(
+                    search_term,
+                    jobs,
+                    seen_external_ids,
+                    site["api_url"].rstrip("/"),
+                    site["public_base_url"].rstrip("/"),
+                )
 
         return jobs
 
@@ -40,6 +48,8 @@ class WorkdayConnector:
         search_term: str,
         jobs: list[Job],
         seen_external_ids: set[str],
+        api_url: str,
+        public_base_url: str,
     ) -> None:
         offset = 0
         limit = 20
@@ -47,7 +57,7 @@ class WorkdayConnector:
         while True:
             # Workday returns jobs in pages
             response = httpx.post(
-                self.api_url,
+                api_url,
                 timeout=REQUEST_TIMEOUT_SECONDS,
                 follow_redirects=True,
                 headers={
@@ -70,7 +80,7 @@ class WorkdayConnector:
 
             for posting in postings:
                 external_path = posting.get("externalPath", "")
-                job_url = self._build_job_url(external_path)
+                job_url = self._build_job_url(external_path, public_base_url)
                 location = posting.get("locationsText")
                 description = " ".join(
                     str(value)
@@ -82,7 +92,7 @@ class WorkdayConnector:
                     location,
                     flags=re.IGNORECASE,
                 ):
-                    detail = self._fetch_job_detail(external_path)
+                    detail = self._fetch_job_detail(external_path, api_url)
                     detail_info = detail.get("jobPostingInfo", {})
                     detail_locations = [
                         detail_info.get("location"),
@@ -135,16 +145,24 @@ class WorkdayConnector:
             if not postings or offset >= total_jobs:
                 break
 
-    def _build_job_url(self, external_path: str) -> str:
+    def _build_job_url(
+        self,
+        external_path: str,
+        public_base_url: str | None = None,
+    ) -> str:
         # Workday normally returns a relative job path
         if external_path.startswith("http"):
             return external_path
 
-        return f"{self.public_base_url}{external_path}"
+        return f"{public_base_url or self.public_base_url}{external_path}"
 
-    def _fetch_job_detail(self, external_path: str) -> dict[str, Any]:
+    def _fetch_job_detail(
+        self,
+        external_path: str,
+        api_url: str | None = None,
+    ) -> dict[str, Any]:
         response = httpx.get(
-            f"{self.api_url.removesuffix('/jobs')}{external_path}",
+            f"{(api_url or self.api_url).removesuffix('/jobs')}{external_path}",
             timeout=REQUEST_TIMEOUT_SECONDS,
             follow_redirects=True,
             headers={

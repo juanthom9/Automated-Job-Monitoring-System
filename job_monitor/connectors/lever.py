@@ -12,11 +12,13 @@ class LeverConnector:
         company_name: str,
         site_name: str,
         region: str = "global",
+        title_prefix: str | None = None,
     ) -> None:
         # Save the company settings
         self.company_name = company_name
         self.site_name = site_name
         self.region = region
+        self.title_prefix = title_prefix
 
     def get_api_url(self) -> str:
         # Lever uses a different domain for European job boards
@@ -45,6 +47,12 @@ class LeverConnector:
         jobs: list[Job] = []
 
         for posting in postings:
+            title = posting.get("text", "Untitled position")
+            if self.title_prefix and not title.lower().startswith(
+                self.title_prefix.lower()
+            ):
+                continue
+
             # Extract the location from Lever's categories object
             categories = posting.get("categories") or {}
             location = categories.get("location")
@@ -53,7 +61,7 @@ class LeverConnector:
             job = Job(
                 external_id=str(posting["id"]),
                 company=self.company_name,
-                title=posting.get("text", "Untitled position"),
+                title=title,
                 url=posting.get("hostedUrl", ""),
                 location=location,
                 description=self._build_description(posting),

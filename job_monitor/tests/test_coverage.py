@@ -1,6 +1,36 @@
 from coverage import build_coverage_report, classify_company
 
 
+def test_intuit_connector_is_classified_as_validated():
+    assert classify_company(
+        {
+            "connector": "intuit",
+            "enabled": True,
+            "validation_status": "valid",
+        }
+    ) == "validated"
+
+
+def test_oracle_hcm_connector_is_classified_as_validated():
+    assert classify_company(
+        {
+            "connector": "oracle_hcm",
+            "enabled": True,
+            "validation_status": "valid",
+        }
+    ) == "validated"
+
+
+def test_phenom_widget_connector_is_classified_as_validated():
+    assert classify_company(
+        {
+            "connector": "phenom_widget",
+            "enabled": True,
+            "validation_status": "valid",
+        }
+    ) == "validated"
+
+
 def test_classify_company_states():
     assert classify_company(
         {

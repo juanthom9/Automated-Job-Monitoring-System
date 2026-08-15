@@ -11,10 +11,19 @@ class GreenhouseConnector:
         self,
         company_name: str,
         board_token: str,
+        content_terms: list[str] | None = None,
+        location_aliases: dict[str, str] | None = None,
     ) -> None:
         # Save the company settings
         self.company_name = company_name
         self.board_token = board_token
+        self.content_terms = [
+            term.casefold() for term in (content_terms or [])
+        ]
+        self.location_aliases = {
+            key.casefold(): value
+            for key, value in (location_aliases or {}).items()
+        }
 
     def get_api_url(self) -> str:
         # Public Greenhouse job board endpoint
@@ -44,15 +53,30 @@ class GreenhouseConnector:
         for posting in postings:
             location_data = posting.get("location") or {}
             location = location_data.get("name")
+            if location:
+                location = self.location_aliases.get(
+                    str(location).casefold(),
+                    location,
+                )
+            title = posting.get("title", "Untitled position")
+            description = posting.get("content", "")
+
+            if self.content_terms:
+                searchable_text = f"{title} {description}".casefold()
+                if not any(
+                    term in searchable_text
+                    for term in self.content_terms
+                ):
+                    continue
 
             # Convert every posting to the shared Job model
             job = Job(
                 external_id=str(posting.get("id", "")),
                 company=self.company_name,
-                title=posting.get("title", "Untitled position"),
+                title=title,
                 url=posting.get("absolute_url", ""),
                 location=location,
-                description=posting.get("content", ""),
+                description=description,
             )
 
             jobs.append(job)
