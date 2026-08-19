@@ -22,6 +22,7 @@ STUDENT_ROLE_PATTERNS = [
     r"\bstudent developer\b",
     r"\bstudent engineer\b",
     r"\bstudent researcher\b",
+    r"\bstudent opportunities\b",
     r"\b(?:contract student worker|student contract worker|student worker)\b",
 ]
 

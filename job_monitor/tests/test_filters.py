@@ -54,7 +54,7 @@ def test_americas_internship_is_not_in_canadian_target_region():
     assert not is_relevant_job(job)
 
 
-def test_student_researcher_is_not_an_internship_or_coop():
+def test_accepts_technical_student_researcher():
     job = Job(
         external_id="researcher",
         company="Example",
@@ -63,7 +63,7 @@ def test_student_researcher_is_not_an_internship_or_coop():
         location="Waterloo, ON, Canada",
         description="Currently pursuing a degree in Computer Science.",
     )
-    assert not is_relevant_job(job)
+    assert is_relevant_job(job)
 
 
 def test_product_management_intern_is_not_technical_role():
@@ -182,6 +182,21 @@ def test_accepts_business_intelligence_coop() -> None:
     assert is_relevant_job(job)
 
 
+def test_accepts_canadian_technical_student_opportunity() -> None:
+    job = Job(
+        external_id="rbc-student-opportunity-1",
+        company="RBC",
+        title=(
+            "2027 Winter Student Opportunities RBC Borealis - "
+            "Software Developer, 4-8 Months"
+        ),
+        url="https://example.com/jobs/rbc-student-opportunity-1",
+        location="TORONTO, Ontario, Canada",
+    )
+
+    assert is_relevant_job(job)
+
+
 def test_accepts_research_scientist_internship() -> None:
     job = Job(
         external_id="research-intern-1",
@@ -275,7 +290,7 @@ def test_rejects_accounting_roles_with_generic_technical_descriptions() -> None:
         assert not is_relevant_job(job)
 
 
-def test_rejects_technical_student_contract_worker() -> None:
+def test_accepts_technical_student_contract_worker() -> None:
     job = Job(
         external_id="student-worker-1",
         company="Example",
@@ -284,7 +299,7 @@ def test_rejects_technical_student_contract_worker() -> None:
         location="Toronto, ON, Canada",
     )
 
-    assert not is_relevant_job(job)
+    assert is_relevant_job(job)
 
 
 def test_canada_only_location_filter_rejects_us_and_accepts_canada() -> None:
