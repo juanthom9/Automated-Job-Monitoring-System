@@ -66,6 +66,7 @@ Connectors are responsible only for retrieving and parsing postings. The rest of
 | Persistence | PostgreSQL, Supabase | Job history and duplicate prevention |
 | Notifications | Gmail SMTP | Email alerts for new matching jobs |
 | Automation | GitHub Actions | Scheduled cloud execution |
+| Containerization | Docker | Reproducible application environment |
 | Quality | Pytest | Connector and pipeline testing |
 
 ## ⚙️ Local Setup
@@ -99,6 +100,32 @@ Connectors are responsible only for retrieving and parsing postings. The rest of
    ```powershell
    python job_monitor\monitor.py
    ```
+
+## 🐳 Docker
+
+Docker packages the Python runtime, dependencies, and monitor source code into a reproducible image. Supabase/PostgreSQL and SMTP remain external services, and credentials are injected when the container starts rather than copied into the image.
+
+1. Build the image from the repository root:
+
+   ```powershell
+   docker build -t job-monitor .
+   ```
+
+2. Run one monitoring cycle using the existing `.env` file:
+
+   ```powershell
+   docker run --rm --env-file .env job-monitor
+   ```
+
+The container runs `job_monitor/monitor.py` once and then exits, matching the project's scheduled-job design. The `--rm` option removes that stopped container after the run; it does not delete the image or any records stored in Supabase.
+
+Rebuild the image after changing application code or dependencies:
+
+```powershell
+docker build -t job-monitor .
+```
+
+Docker is optional for local development, and the existing GitHub Actions workflow continues to run the monitor directly with Python.
 
 ## 📋 Source Management
 
