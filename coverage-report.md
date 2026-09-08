@@ -155,7 +155,7 @@ Total companies: **145**
 | Visier | Greenhouse | greenhouse | validated | 11 | [official page](https://www.visier.com/careers/) |
 | Wattpad | Lever | lever | validated | 3 | [official page](https://jobs.lever.co/wattpad) |
 | Waymo | Greenhouse | greenhouse | validated | 395 | [official page](https://waymo.com/careers/) |
-| Wealthsimple | Lever | lever | validated | 0 | [official page](https://jobs.lever.co/wealthsimple) |
+| Wealthsimple | Ashby | ashby | validated | 49 | [official page](https://jobs.ashbyhq.com/wealthsimple) |
 | Workday | Workday | workday | validated | 40 | [official page](https://workday.wd5.myworkdayjobs.com/Workday) |
 | Yelp | Phenom | phenom_widget | validated | 49 | [official page](https://www.yelp.careers/us/en/search-results/) |
 | Zillow | Greenhouse | workday | validated | 40 | [official page](https://www.zillow.com/careers/) |

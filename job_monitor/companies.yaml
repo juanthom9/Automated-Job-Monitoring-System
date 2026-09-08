@@ -10,16 +10,15 @@ companies:
   validation_error: null
   last_job_count: 137
 - name: Wealthsimple
-  careers_url: https://jobs.lever.co/wealthsimple
-  platform_hint: Lever
+  careers_url: https://jobs.ashbyhq.com/wealthsimple
+  platform_hint: Ashby
   enabled: true
-  connector: lever
-  site_name: wealthsimple
-  region: global
+  connector: ashby
+  board_name: wealthsimple
   discovery_status: resolved
   validation_status: valid
   validation_error: null
-  last_job_count: 0
+  last_job_count: 49
 - name: Anthropic
   careers_url: https://www.anthropic.com/careers/jobs
   platform_hint: Greenhouse
