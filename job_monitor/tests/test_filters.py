@@ -182,6 +182,21 @@ def test_accepts_business_intelligence_coop() -> None:
     assert is_relevant_job(job)
 
 
+def test_accepts_canadian_software_engineering_summer_analyst() -> None:
+    job = Job(
+        external_id="R_1509435",
+        company="TD Bank",
+        title=(
+            "2027 Summer Analyst - Software Engineering "
+            "Rotational Program (Toronto)"
+        ),
+        url="https://example.com/jobs/R_1509435",
+        location="Toronto, Ontario, Canada",
+    )
+
+    assert is_relevant_job(job)
+
+
 def test_accepts_canadian_technical_student_opportunity() -> None:
     job = Job(
         external_id="rbc-student-opportunity-1",

@@ -142,7 +142,7 @@ Total companies: **145**
 | Stripe | Greenhouse | greenhouse | validated | 548 | [official page](https://stripe.com/jobs/search) |
 | Supabase | Supabase Careers | ashby | validated | 55 | [official page](https://supabase.com/careers) |
 | Synopsys | Radancy TalentBrew | talentbrew | validated | 9 | [official page](https://careers.synopsys.com/en/search-jobs) |
-| TD Bank | Workday | workday | validated | 40 | [official page](https://careers.td.com/) |
+| TD Bank | Workday | workday | validated | 114 | [official page](https://careers.td.com/) |
 | TELUS | SuccessFactors | successfactors | validated | 16 | [official page](https://careers.telus.com/) |
 | Take-Two Interactive | Greenhouse | greenhouse | validated | 28 | [official page](https://careers.take2games.com/jobs) |
 | ThinkOn | ADP Workforce Now | adp_workforce_now | validated | 5 | [official page](https://www.thinkon.com/careers/) |

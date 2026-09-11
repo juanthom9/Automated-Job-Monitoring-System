@@ -38,6 +38,7 @@ class PhenomWidgetConnector:
         seen_external_ids: set[str] = set()
         offset = 0
         page_size = 100
+        total: int | None = None
 
         while True:
             response = httpx.post(
@@ -129,8 +130,11 @@ class PhenomWidgetConnector:
                 )
 
             offset += len(postings)
-            total = int(search.get("totalHits") or 0)
-            if not postings or offset >= total:
+            if total is None:
+                total = int(search.get("totalHits") or 0)
+            if not postings or (total > 0 and offset >= total) or (
+                total == 0 and len(postings) < page_size
+            ):
                 break
 
         return jobs

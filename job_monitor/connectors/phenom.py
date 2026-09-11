@@ -21,6 +21,7 @@ class PhenomConnector:
         jobs: list[Job] = []
         offset = 0
         limit = 100
+        total: int | None = None
 
         while True:
             params = {
@@ -73,13 +74,12 @@ class PhenomConnector:
                 )
 
             offset += len(postings)
-            total = int(
-                data.get("totalCount")
-                or data.get("count")
-                or 0
-            )
+            if total is None:
+                total = int(data.get("totalCount") or data.get("count") or 0)
 
-            if not postings or offset >= total:
+            if not postings or (total > 0 and offset >= total) or (
+                total == 0 and len(postings) < limit
+            ):
                 break
 
         return jobs

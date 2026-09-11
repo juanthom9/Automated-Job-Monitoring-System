@@ -15,6 +15,7 @@ class AppleConnector:
 
     def fetch_jobs(self) -> list[Job]:
         jobs: list[Job] = []
+        seen_external_ids: set[str] = set()
         page = 1
 
         while True:
@@ -41,6 +42,7 @@ class AppleConnector:
             if not result_cards:
                 break
 
+            new_jobs = 0
             for card in result_cards:
                 link = card.select_one("h3 a[href*='/details/']")
                 location_element = card.select_one(
@@ -61,6 +63,9 @@ class AppleConnector:
                     if "details" in path_parts
                     else relative_url
                 )
+                if external_id in seen_external_ids:
+                    continue
+                seen_external_ids.add(external_id)
 
                 jobs.append(
                     Job(
@@ -75,6 +80,10 @@ class AppleConnector:
                         ),
                     )
                 )
+                new_jobs += 1
+
+            if new_jobs == 0:
+                break
 
             page += 1
 

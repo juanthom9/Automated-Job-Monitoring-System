@@ -16,12 +16,14 @@ class WorkdayConnector:
         public_base_url: str,
         search_terms: list[str] | None = None,
         additional_sites: list[dict[str, str]] | None = None,
+        applied_facets: dict[str, list[str]] | None = None,
     ) -> None:
         # Save the company settings
         self.company_name = company_name
         self.api_url = api_url.rstrip("/")
         self.public_base_url = public_base_url.rstrip("/")
         self.search_terms = search_terms or [""]
+        self.applied_facets = applied_facets or {}
         self.sites = [
             {"api_url": self.api_url, "public_base_url": self.public_base_url},
             *(additional_sites or []),
@@ -53,6 +55,7 @@ class WorkdayConnector:
     ) -> None:
         offset = 0
         limit = 20
+        total_jobs: int | None = None
 
         while True:
             # Workday returns jobs in pages
@@ -66,7 +69,7 @@ class WorkdayConnector:
                     "User-Agent": "InternshipJobMonitor/1.0",
                 },
                 json={
-                    "appliedFacets": {},
+                    "appliedFacets": self.applied_facets,
                     "limit": limit,
                     "offset": offset,
                     "searchText": search_term,
@@ -77,6 +80,12 @@ class WorkdayConnector:
 
             data: dict[str, Any] = response.json()
             postings = data.get("jobPostings", [])
+
+            # Some Workday tenants report the total only on the first page
+            # and return zero for subsequent offsets. Keep the first total so
+            # pagination does not stop after 40 results.
+            if total_jobs is None:
+                total_jobs = int(data.get("total", 0))
 
             for posting in postings:
                 external_path = posting.get("externalPath", "")
@@ -138,11 +147,14 @@ class WorkdayConnector:
 
                 jobs.append(job)
 
-            total_jobs = data.get("total", 0)
-            offset += limit
+            offset += len(postings)
 
             # Stop when every page has been downloaded
-            if not postings or offset >= total_jobs:
+            if (
+                not postings
+                or (total_jobs > 0 and offset >= total_jobs)
+                or (total_jobs == 0 and len(postings) < limit)
+            ):
                 break
 
     def _build_job_url(

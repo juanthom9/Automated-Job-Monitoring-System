@@ -83,6 +83,7 @@ def create_connector(company: dict[str, Any]):
             public_base_url=company["public_base_url"],
             search_terms=company.get("search_terms"),
             additional_sites=company.get("additional_sites"),
+            applied_facets=company.get("applied_facets"),
         )
 
     if connector_name == "smartrecruiters":

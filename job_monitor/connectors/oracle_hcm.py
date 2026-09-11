@@ -31,6 +31,7 @@ class OracleHCMConnector:
 
         for search_term in self.SEARCH_TERMS:
             offset = 0
+            total: int | None = None
             while True:
                 result = self._fetch_page(search_term, offset)
                 search = (result.get("items") or [{}])[0]
@@ -44,8 +45,13 @@ class OracleHCMConnector:
                     jobs.append(job)
 
                 offset += len(postings)
-                total = int(search.get("TotalJobsCount") or 0)
-                if not postings or offset >= total:
+                if total is None:
+                    total = int(search.get("TotalJobsCount") or 0)
+                if (
+                    not postings
+                    or (total > 0 and offset >= total)
+                    or (total == 0 and len(postings) < self.PAGE_SIZE)
+                ):
                     break
 
         return jobs

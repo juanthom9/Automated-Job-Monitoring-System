@@ -57,7 +57,7 @@ def test_fetch_jobs_paginates(monkeypatch):
             "content": [{"id": "1", "name": "First"}],
         },
         {
-            "totalFound": 2,
+            "totalFound": 0,
             "content": [{"id": "2", "name": "Second"}],
         },
     ]

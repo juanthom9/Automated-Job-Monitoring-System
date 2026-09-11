@@ -24,6 +24,7 @@ class TalentBrewConnector:
 
         for search_term in self.search_terms:
             page = 1
+            total_pages: int | None = None
             while True:
                 response = httpx.get(
                     self.search_url,
@@ -33,7 +34,9 @@ class TalentBrewConnector:
                     headers={"User-Agent": "InternshipJobMonitor/1.0"},
                 )
                 response.raise_for_status()
-                page_jobs, total_pages = self._parse_page(response.text)
+                page_jobs, reported_total_pages = self._parse_page(response.text)
+                if total_pages is None:
+                    total_pages = reported_total_pages
                 for job in page_jobs:
                     if job.external_id in seen:
                         continue

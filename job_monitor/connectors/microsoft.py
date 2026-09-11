@@ -28,6 +28,7 @@ class MicrosoftConnector:
         jobs: list[Job] = []
         seen_external_ids: set[str] = set()
         start = 0
+        total: int | None = None
 
         while True:
             response = httpx.get(
@@ -50,6 +51,8 @@ class MicrosoftConnector:
             response.raise_for_status()
             data = response.json().get("data", {})
             postings = data.get("positions", [])
+            if total is None:
+                total = int(data.get("count", 0))
 
             if not postings:
                 break
@@ -96,7 +99,10 @@ class MicrosoftConnector:
                 )
 
             start += len(postings)
-            if start >= int(data.get("count", start)):
+            if (
+                (total > 0 and start >= total)
+                or (total == 0 and len(postings) < self.PAGE_SIZE)
+            ):
                 break
 
         return jobs

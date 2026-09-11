@@ -26,6 +26,8 @@ class JibeConnector:
     def fetch_jobs(self) -> list[Job]:
         jobs: list[Job] = []
         seen_external_ids: set[str] = set()
+        fetched = 0
+        total: int | None = None
 
         for page in range(1, self.MAX_PAGES + 1):
             response = httpx.get(
@@ -43,6 +45,7 @@ class JibeConnector:
             postings = result.get("jobs")
             if not isinstance(postings, list):
                 raise ValueError("Jibe careers API returned an unexpected response")
+            fetched += len(postings)
 
             for posting in postings:
                 job = self._map_job(posting)
@@ -51,8 +54,13 @@ class JibeConnector:
                 seen_external_ids.add(job.external_id)
                 jobs.append(job)
 
-            total = int(result.get("totalCount") or result.get("count") or 0)
-            if not postings or len(jobs) >= total or len(postings) < self.PAGE_SIZE:
+            if total is None:
+                total = int(result.get("totalCount") or result.get("count") or 0)
+            if (
+                not postings
+                or (total > 0 and fetched >= total)
+                or (total == 0 and len(postings) < self.PAGE_SIZE)
+            ):
                 break
 
         return jobs

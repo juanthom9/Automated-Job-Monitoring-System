@@ -19,6 +19,7 @@ INTERNSHIP_PATTERNS = [
 
 
 STUDENT_ROLE_PATTERNS = [
+    r"\bsummer analyst\b",
     r"\bstudent developer\b",
     r"\bstudent engineer\b",
     r"\bstudent researcher\b",

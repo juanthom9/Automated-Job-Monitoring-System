@@ -25,6 +25,7 @@ class SmartRecruitersConnector:
         jobs: list[Job] = []
         offset = 0
         limit = 100
+        total: int | None = None
 
         while True:
             response = httpx.get(
@@ -71,9 +72,12 @@ class SmartRecruitersConnector:
                 )
 
             offset += len(postings)
-            total = int(data.get("totalFound", 0))
+            if total is None:
+                total = int(data.get("totalFound", 0))
 
-            if not postings or offset >= total:
+            if not postings or (total > 0 and offset >= total) or (
+                total == 0 and len(postings) < limit
+            ):
                 break
 
         return jobs

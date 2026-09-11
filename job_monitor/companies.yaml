@@ -748,11 +748,17 @@ companies:
   connector: workday
   api_url: https://td.wd3.myworkdayjobs.com/wday/cxs/td/TD_Bank_Careers/jobs
   public_base_url: https://td.wd3.myworkdayjobs.com/en-US/TD_Bank_Careers
+  applied_facets:
+    locationCountry:
+    - a30a87ed25634629aa6c3958aa2b91ea
+    jobFamily:
+    - de769652963501ab29a8b80c0704c3aa
+    - de769652963501e60b293b0d070431ab
   discovery_status: resolved
   discovered_url: https://td.wd3.myworkdayjobs.com/en-US/TD_Bank_Careers
   validation_status: valid
   validation_error: null
-  last_job_count: 40
+  last_job_count: 114
 - name: BMO
   careers_url: https://jobs.bmo.com/global/en/home
   platform_hint: Workday
